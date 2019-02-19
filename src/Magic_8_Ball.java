@@ -6,13 +6,15 @@ public class Magic_8_Ball {
     //write code here
         Scanner keyboard;
         keyboard=new Scanner (System.in);
-   int pickNumber;
+   Float pickNumber;
 
 
+        System.out.println("Give me a number between 1 and 100");
+        System.out.println("Hint type 404 if you wanna see surprise");
 
         do {
-            System.out.println("Give me a number between 1 and 100");
-            pickNumber = Integer.parseInt((keyboard.nextLine()));
+
+            pickNumber = Float.valueOf(keyboard.nextLine());
             if (pickNumber  <=10) {
                 System.out.println("I see good fortune in your future");
             }
@@ -42,6 +44,13 @@ public class Magic_8_Ball {
             }
             else if (pickNumber <= 100) {
                 System.out.println("You are an amazing you that you can ever be, don't let yourself down");
+            }
+            System.out.println("Give me a number between 1 and 100");
+            if (pickNumber == 404){
+                System.out.println("Error 404");
+                System.out.println("Number Not Found");
+                System.out.println("Thursday Feb 21 2019 1:30PM");
+                break;
             }
         }while(1+1==2);
 
